@@ -13,6 +13,7 @@ object Main {
 
     for (dir <- hdfsFileService.getDirectories(STAGE_PATH)){
       val stageFiles = hdfsFileService.getFilesWithExtension(dir, "csv")
+
       if (stageFiles.nonEmpty){
         val odsDir = new Path(ODS_PATH+"/"+dir.getName)
         val odsFile = new Path(odsDir + "/result.csv")

@@ -26,7 +26,7 @@ class HDFSFileService {
   def getFilesWithExtension(distPath: Path, extension: String): List[Path] = {
     val buffer = new ListBuffer[Path]
     for (status <- fileSystem.listStatus(distPath)) {
-      if (status.isFile) {
+      if (status.isFile && status.getLen>0) {
         val fileName = status.getPath.getName
         val distExt = fileName.substring(fileName.lastIndexOf(".")+1)
         if (distExt == extension)
