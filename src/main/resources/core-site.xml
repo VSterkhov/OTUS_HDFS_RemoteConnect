@@ -6,7 +6,7 @@
 <configuration>
   <property>
     <name>fs.default.name</name>
-    <value>hdfs://rc1a-dataproc-m-zws6uieto9qji2b3.mdb.yandexcloud.net</value>
+    <value>hdfs://172.22.207.17:9000</value>
   </property>
   <property>
     <name>hadoop.tmp.dir</name>
